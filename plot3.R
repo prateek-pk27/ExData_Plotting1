@@ -4,8 +4,8 @@
   # Subsetting the data
   # Getting Weekday from Date
 power_consumption <- read.table("household_power_consumption.txt", header = TRUE, sep = ';')
-power_consumption <- mutate(df, Date = as.Date(Date, "%d/%m/%Y"))
-power_consumption_subset <- subset(df1, Date == "2007-02-01" | Date == "2007-02-02")
+power_consumption <- mutate(power_consumption, Date = as.Date(Date, "%d/%m/%Y"))
+power_consumption_subset <- subset(power_consumption, Date == "2007-02-01" | Date == "2007-02-02")
 date_time <- strptime(paste(power_consumption_subset$Date, power_consumption_subset$Time, sep = ' '), "%Y-%m-%d %H:%M:%S")
 
 # Getting Plotting Data
