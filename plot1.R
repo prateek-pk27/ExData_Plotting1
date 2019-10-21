@@ -4,8 +4,8 @@
   # Subsetting the data
   # Getting Plotting Data
 power_consumption <- read.table("household_power_consumption.txt", header = TRUE, sep = ';') 
-power_consumption <- mutate(df, Date = as.Date(Date, "%d/%m/%Y")) 
-power_consumption_subset <- subset(df1, Date == "2007-02-01" | Date == "2007-02-02") 
+power_consumption <- mutate(power_consumption, Date = as.Date(Date, "%d/%m/%Y")) 
+power_consumption_subset <- subset(power_consumption, Date == "2007-02-01" | Date == "2007-02-02") 
 global_active_power <- as.numeric(as.character(power_consumption_subset$Global_active_power)) 
 
 # Plotting Graph on a PNG file
