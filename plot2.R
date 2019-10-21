@@ -1,4 +1,3 @@
-
 # Loading and Selecting relevent Data
   # Reading Daa from file
   # Converting colunm class to Date
